@@ -3,10 +3,10 @@ Description=Inotify Monitor for /tmp Directory
 # After=network.target
 
 [Service]
-ExecStart=/usr/local/bin/inotify_tmp_monitor.sh
+ExecStart=/home/saltchicken/github/tmp_monitor/inotify_tmp_monitor.sh
 Restart=always
-User=nobody
+User=root
 StandardOutput=null
 
 [Install]
-WatedBy=multi-user.target
+WantedBy=multi-user.target
