@@ -1,0 +1,12 @@
+[Unit]
+Description=Inotify Monitor for /tmp Directory
+# After=network.target
+
+[Service]
+ExecStart=/usr/local/bin/inotify_tmp_monitor.sh
+Restart=always
+User=nobody
+StandardOutput=null
+
+[Install]
+WatedBy=multi-user.target
