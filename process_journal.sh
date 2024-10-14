@@ -14,6 +14,6 @@ journalctl -f -t "$TAG" | while read -r line; do
   echo "New entry: $line"
 
   if [[ "$line" == *"INFO"* ]]; then
-    echo "Error found: $line" >>error.log
+    echo "Error found: $line" >>info.log
   fi
 done
